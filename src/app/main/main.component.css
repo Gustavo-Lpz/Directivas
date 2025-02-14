@@ -1,0 +1,90 @@
+.seasonal-section {
+    font-size: 18px;
+    line-height: 2.6;
+    text-align: start;
+}
+
+.seasonal-section strong {
+    font-weight: bold;
+}
+
+.food {
+    display: flex;
+    flex-direction: column;
+}
+
+.collapsible {
+    border-top: 1px solid #000; 
+    padding: 30px 0;
+    display: inline-block;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out; 
+    height: 0; 
+    margin-bottom: 30px;
+}
+
+.collapsible.open { 
+    height: auto; 
+}
+
+.title {
+    cursor: pointer; 
+}
+
+.title:hover {
+    color: #005335; 
+  }
+
+.options {
+    display: flex;
+    justify-content: space-around; 
+    margin-bottom: 30px;
+    align-items: center;
+    gap: 10px; 
+  }
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+
+.menu-button.activate {
+    background-color: #005335; 
+    color: white;
+  }
+
+.menu-button:not(.activate):hover {
+    color: #005335; 
+    text-decoration: underline; 
+}
+
+.imgs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 300px;
+    position: relative;
+    overflow: hidden; /* Oculta contenido fuera del contenedor */
+}
+
+.image-item {
+    background-color: #005335;
+    border-radius: 100px; 
+    max-width: 150px;
+    height: auto;
+    opacity: 0; /* Oculto por defecto */
+    position: absolute; 
+    transition: opacity 0.5s ease-in-out; /* Suaviza la transición */
+}
+
+.image-item.visible {
+    opacity: 1; /* Muestra la imagen cuando es visible */
+}

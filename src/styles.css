@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import
+url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*estilos globales*/
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.container {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 15px;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Montserrat';
+}

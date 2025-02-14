@@ -1,0 +1,34 @@
+<div class="container">
+    <section class="seasonal-section">
+        <h1>¡Disfrutalos!</h1>
+        <h2><strong>Conoce nuestras bebidas y alimentos de temporada</strong></h2>
+    </section>
+    <section class="food">
+        @for (i of items; track i){ 
+            <div class="collapsible" [class.open]="globalKey===i.text">
+                <h1 (click)="fnOpenCollapsible(i.text)" class="title">{{i.text}}</h1>
+                @if(globalKey===i.text ){
+                    <div class="options">
+                        @for(j of i.subMenu; track j){
+                            <button
+                                class="menu-button"
+                                [class.activate]="selectedOption===j.text"
+                                (click)="fnSelectOption(j.images, j.text)"
+                            >{{j.text}}</button>
+                        }
+                    </div>
+                    <div class="imgs-container">
+                        @for (image of selectedImages; track image) {
+                            <img 
+                            src="assets/{{image}}" 
+                            alt="Se fue de sabatico"
+                            class="image-item"
+                            [class.visible]="image===currentImage"
+                            >
+                        }
+                    </div>
+                }
+            </div>
+        }
+    </section>
+</div>
