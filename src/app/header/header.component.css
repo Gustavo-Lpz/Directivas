@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0px 10px;
+    background-color: #fffaf6;
+}
+
+.header .logo img {
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.locate-store {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.location-icon {
+    max-width: 90px;
+    margin-right: 5px;
+}
